@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criarts Videos - Produções Cinematográficas</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&h=1080&fit=crop')"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <!-- Logo/Badge -->
+            <div class="hero-badge">
+                <span class="badge-dot"><img src="favicon.ico" alt="" class="badge-dot"></span>
+                <span class="badge-text">Criarts Videos Produções</span>
+            </div>
+
+            <!-- Título Principal -->
+            <h1 class="hero-title">Seu Casamento em Movimento</h1>
+
+            <!-- Subtítulo -->
+            <p class="hero-subtitle">
+                Transformamos momentos preciosos em obras cinematográficas que você revivará para sempre
+            </p>
+
+            <!-- CTAs -->
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToPackages()">
+                    Ver Pacotes
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                <button class="btn btn-secondary" onclick="openWhatsApp('Olá! Gostaria de saber mais sobre os serviços de videografia da Criarts.')">
+                    Faça seu orcaçamento
+                </button>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Saiba mais</span>
+            <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="12 5 12 19 5 12 12 19 19 12"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <!-- POR QUE ESCOLHER SECTION -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2>Por que escolher a Criarts?</h2>
+                <p>Experiência, qualidade e dedicação em cada frame</p>
+            </div>
+
+            <div class="differentials-grid">
+                <!-- Diferencial 1 -->
+                <div class="differential-card">
+                    <div class="differential-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3>Cinematografia Premium</h3>
+                    <p>Equipamento profissional de última geração e técnicas cinematográficas para resultados de cinema</p>
+                </div>
+
+                <!-- Diferencial 2 -->
+                <div class="differential-card">
+                    <div class="differential-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h3>Emoção Capturada</h3>
+                    <p>Focamos em capturar os momentos mais emocionantes e autênticos do seu dia especial</p>
+                </div>
+
+                <!-- Diferencial 3 -->
+                <div class="differential-card">
+                    <div class="differential-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Entrega Rápida</h3>
+                    <p>Prazos garantidos com qualidade excepcional em todos os nossos pacotes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACOTES SECTION -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Pacotes</h2>
+                <p>Escolha a opção perfeita para sua celebração</p>
+            </div>
+
+            <div class="packages-grid">
+                <!-- Pacote 1: Essencial -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Essencial</h3>
+                        <p class="package-description">Perfeito para casamentos intimistas</p>
+                    </div>
+
+                    <div class="package-price">
+                        <span class="price-value">R$ 3.000</span>
+                    </div>
+
+                    <ul class="package-features">
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 3 horas de captação</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Cerimônia e Recepção</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 2 Câmeras Profissionais</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Link de Acesso à Nuvem</li>
+                    </ul>
+
+                    <div class="package-delivery">
+                        <span>Entrega em <strong>90 dias</strong></span>
+                    </div>
+
+                    <button class="btn btn-package" onclick="openWhatsAppPackage('Essencial')">Solicitar Orçamento</button>
+                    <p class="package-validity">Orçamento válido por 30 dias</p>
+                </div>
+
+                <!-- Pacote 2: Premium -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Premium</h3>
+                        <p class="package-description">Cobertura completa com trailer</p>
+                    </div>
+
+                    <div class="package-price">
+                        <span class="price-value">R$ 3.800</span>
+                    </div>
+
+                    <ul class="package-features">
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Cobertura estendida</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Cerimônia e Recepção</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Trailer em 1 semana</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Link de Acesso à Nuvem</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Pen Drive</li>
+                    </ul>
+
+                    <div class="package-delivery">
+                        <span>Entrega em <strong>60 dias</strong></span>
+                    </div>
+
+                    <button class="btn btn-package" onclick="openWhatsAppPackage('Premium')">Solicitar Orçamento</button>
+                    <p class="package-validity">Orçamento válido por 30 dias</p>
+                </div>
+
+                <!-- Pacote 3: Luxo Completo (DESTAQUE) -->
+                <div class="package-card package-highlighted">
+                    <div class="package-badge">MAIS ESCOLHIDO</div>
+                    
+                    <div class="package-header">
+                        <h3>Luxo Completo</h3>
+                        <p class="package-description">Experiência cinematográfica total</p>
+                    </div>
+
+                    <div class="package-price">
+                        <span class="price-value">R$ 5.200</span>
+                    </div>
+
+                    <ul class="package-features">
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Cobertura máxima</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Making Off Noiva e Noivo</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Pré-Wedding</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Cerimônia e Recepção</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Drone</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Trailer em 1 dia</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 2 Blu-Ray + 1 Pen Drive</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Embalagem Personalizada</li>
+                    </ul>
+
+                    <div class="package-delivery">
+                        <span>Entrega em <strong>30 dias</strong></span>
+                    </div>
+
+                    <button class="btn btn-package btn-package-highlighted" onclick="openWhatsAppPackage('Luxo Completo')">Solicitar Orçamento</button>
+                    <p class="package-validity">Orçamento válido por 30 dias</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA SECTION -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Galeria de Trabalhos</h2>
+                <p>Veja exemplos de nossas produções</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Galeria 1: Making Off Noiva -->
+                <div class="gallery-card" onclick="openYouTube('https://www.youtube.com/watch?v=Ac2QlFm9MGQ')">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop" alt="Making Off Noiva">
+                    <div class="gallery-overlay">
+                        <h3>Making Off Noiva</h3>
+                        <p>Momentos especiais de preparação</p>
+                        <div class="play-button">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galeria 2: Pré Wedding -->
+                <div class="gallery-card" onclick="openYouTube('https://youtu.be/89Qn14EsEt8?si=AvAqP3FPQSbrQdd5&t=17')">
+                    <img src="https://images.unsplash.com/photo-1675697993822-988a8d11cd25?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pré Wedding">
+                    <div class="gallery-overlay">
+                        <h3>Pré Wedding</h3>
+                        <p>Momentos românticos antes do grande dia</p>
+                        <div class="play-button">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO SECTION -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Pronto para eternizar seu momento?</h2>
+            <p>Entre em contato conosco e vamos criar a história perfeita do seu casamento</p>
+
+            <div class="contact-buttons">
+                <button class="btn btn-contact btn-whatsapp" onclick="openWhatsApp('Olá, quero eternizar o meu momento com vocês. Posso contar com vocês?')">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.255.949c-1.238.503-2.335 1.236-3.356 2.259-1.02 1.02-1.756 2.119-2.259 3.356-.606 1.605-.949 3.318-.949 5.111 0 2.752.723 5.363 2.102 7.643L2.861 23.35l8.236-2.722c2.354 1.429 5.033 2.148 7.835 2.148 9.396 0 17.002-7.605 17.002-17.002 0-4.537-1.809-8.596-5.337-11.643-3.529-3.046-8.106-4.723-12.665-4.723"></path>
+                    </svg>
+                    WhatsApp
+                </button>
+
+                <button class="btn btn-contact btn-instagram" onclick="openInstagram()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path>
+                        <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"></circle>
+                    </svg>
+                    @criartsvideos
+                </button>
+
+                <button class="btn btn-contact btn-youtube" onclick="openYouTubeChannel()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                    </svg>
+                    Criarts Vídeos Produções
+                </button>
+            </div>
+
+            <p class="contact-note">Responderemos sua mensagem em até 24 horas</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Criarts Videos Produções. Todos os direitos reservados.</p>
+        <p>Made with Web Criarts Produções</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
