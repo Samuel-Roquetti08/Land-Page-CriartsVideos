@@ -112,7 +112,7 @@ body {
 
 .badge-dot {
     width: 2rem;
-    height: rem;
+    height: 2rem;
     border-radius: 50%;
 }
 
@@ -601,6 +601,10 @@ section {
     color: var(--text-dark);
 }
 
+.contact p{
+    margin-bottom: 30px;
+}
+
 @media (min-width: 768px) {
     .contact h2 {
         font-size: 3rem;
@@ -645,6 +649,11 @@ section {
 .btn-contact svg {
     width: 1.25rem;
     height: 1.25rem;
+}
+
+#whatsapp{
+    display: block;
+    padding-bottom: 2px;
 }
 
 .btn-whatsapp {
