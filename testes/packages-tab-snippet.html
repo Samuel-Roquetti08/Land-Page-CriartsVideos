@@ -1,0 +1,50 @@
+<!--
+  SUBSTITUA o bloco inteiro da <section class="packages"> pelo código abaixo
+-->
+
+<section class="packages" id="packages">
+    <div class="container">
+        <div class="section-header">
+            <h2>Nossos Pacotes</h2>
+            <p>Escolha a opção perfeita para sua celebração</p>
+
+            <!-- ABAS DE CATEGORIA -->
+            <div class="packages-tabs" role="tablist" aria-label="Categoria de evento">
+                <button
+                    class="tab-btn tab-active"
+                    role="tab"
+                    aria-selected="true"
+                    data-category="casamento"
+                    onclick="switchCategory('casamento')"
+                >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    Casamento
+                </button>
+                <button
+                    class="tab-btn"
+                    role="tab"
+                    aria-selected="false"
+                    data-category="aniversario"
+                    onclick="switchCategory('aniversario')"
+                >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        <path d="M12 2v3"></path>
+                        <path d="M8 7V5"></path>
+                        <path d="M16 7V5"></path>
+                    </svg>
+                    Aniversário
+                </button>
+            </div>
+        </div>
+
+        <!-- GRID DE PACOTES (preenchido dinamicamente pelo JS) -->
+        <div class="packages-grid" id="packages-grid">
+            <!-- Os cards são injetados pelo script.js via switchCategory() -->
+        </div>
+
+    </div>
+</section>

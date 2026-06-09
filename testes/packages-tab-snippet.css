@@ -1,0 +1,89 @@
+/*
+  ADICIONE este bloco ao final do seu styles.css
+  (ou dentro do bloco PACOTES SECTION, logo após .package-validity)
+*/
+
+/* ============================================
+   ABAS DE CATEGORIA (CASAMENTO / ANIVERSÁRIO)
+   ============================================ */
+
+.packages-tabs {
+    display: inline-flex;
+    gap: 0.5rem;
+    background-color: var(--bg-lighter);
+    border: 1px solid var(--border-color);
+    padding: 0.375rem;
+    border-radius: 9999px;
+    margin-top: 1.5rem;
+}
+
+.tab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.5rem;
+    border: none;
+    border-radius: 9999px;
+    background-color: transparent;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tab-btn svg {
+    width: 1rem;
+    height: 1rem;
+    transition: color 0.25s ease;
+}
+
+.tab-btn:hover:not(.tab-active) {
+    color: var(--text-dark);
+    background-color: var(--border-color);
+}
+
+/* Estado ativo da aba */
+.tab-btn.tab-active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+}
+
+/* Animação de entrada dos cards ao trocar de aba */
+@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicada via JS no momento da injeção dos cards */
+.package-card.card-entering {
+    animation: cardEnter 0.4s ease forwards;
+}
+
+/* Delay escalonado para cada card (efeito cascata) */
+.package-card.card-entering:nth-child(1) { animation-delay: 0s; }
+.package-card.card-entering:nth-child(2) { animation-delay: 0.08s; }
+.package-card.card-entering:nth-child(3) { animation-delay: 0.16s; }
+
+/* Responsividade das abas */
+@media (max-width: 640px) {
+    .packages-tabs {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tab-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
